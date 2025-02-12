@@ -1,0 +1,11 @@
+.btm-Sut {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: var(--Orange);
+    letter-spacing: 0.13em;
+    font-weight: var(--weight-Bold);
+}
+.btm-Sut:hover {
+    background-color: var(--White);
+    cursor: pointer;
+}

@@ -1,0 +1,57 @@
+
+.card-rating {
+    max-inline-size: 25.625rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.875rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 1.5rem;
+    color: var(--White);
+}
+.icon-star {
+    inline-size: 3rem;
+    block-size: 3.125rem;
+    padding: 1rem 0.875rem;
+    background-color: var(--Dark-Blue-modal);
+    border-radius: 50%;
+}
+.stars-content {
+    display: flex;
+    justify-content: space-between;
+}
+.rating__question {
+    font-size: 1.75rem;
+    font-weight: var(--weight-Bold);
+    margin: 0 0 1.25rem 0;
+}
+.rating__detalle {
+    color: var(--Light-Grey);
+    line-height: 160%;
+}
+.rating__calificacion {
+    display: flex;
+    justify-content: space-between;
+}
+.C-n {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 3.375rem;
+    block-size: 3.375rem;
+    background-color: var(--Dark-Blue-modal);
+    border-radius: 50%;
+    font-weight: var(--weight-Bold);
+}
+.C-n span {
+    pointer-events: none;
+}
+.C-n:hover {
+    background-color: var(--Orange);
+    color: var(--Very-Dark-Blue);
+    cursor: pointer;
+}
+.is-Active {
+    background-color: var(--White);
+    color: var(--Very-Dark-Blue);
+}

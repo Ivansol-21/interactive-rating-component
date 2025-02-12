@@ -1,0 +1,47 @@
+/* Fuente */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Estilos individuales de los componentes */
+@import url('./styles/Rating.css');
+@import url('./styles/BotonSubmit.css');
+
+:root {
+    /* Color primary */
+    --Orange: rgb(251, 116, 19);
+    /* neutral */
+    --White: rgb(255, 255, 255);
+    --Light-Grey: rgb(149, 158, 172);
+    --Dark-Blue: rgba(37, 45, 55, 0.5);
+    --Dark-Blue-modal: rgba(37, 45, 55, 0.7);
+    --Very-Dark-Blue: rgb(18, 20, 23);
+
+    /* Tipografia */
+    --font-family: 'Overpass';
+
+    --font-size: 15px;
+
+    --weight-Bold: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+}
+#root {
+    min-block-size: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--Very-Dark-Blue);
+}
