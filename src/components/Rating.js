@@ -1,4 +1,5 @@
 import BotonSubmit from './BotonSubmit.js';
+import { numSeleccionado } from '../utils/funcionalidades.js';
 
 export const Rating = () => {
     // Creamos los elementos del DOM
@@ -42,13 +43,13 @@ export const Rating = () => {
     $p.classList.add('rating__detalle');
     $calificacion.classList.add('rating__calificacion');
 
-    // Agregando los elementos a la tarjeta
+    // Agregando los elementos a la tarjeta Rating
     $cardRating.appendChild($starContent);
     $cardRating.appendChild($divText);
     $cardRating.appendChild($calificacion);
     $cardRating.appendChild(BotonSubmit());
 
-    // Función para la cantidad de estrellas
+    // Función para la cantidad de estrellas que se agregaran (Opcional)
     const cantidadStar = (cantidad) => {
         $starContent.innerHTML = ''; // Limpiar contenido previo
         for (let i = 0; i < cantidad; i++) {
@@ -64,17 +65,11 @@ export const Rating = () => {
 
     // Manejador de eventos 'CLICK'
     document.addEventListener('click', e => {
-        const target = e.target,
-            $numeros = document.querySelectorAll('.C-n');
-
-        $numeros.forEach((e, i) => {
-            e.classList.remove('is-Active');
-
-            if (target.id === e.id) {
-                e.classList.toggle('is-Active');
-                cantidadStar(i+1);
-            }
-        });
+            numSeleccionado( // Esta es la funcion que importamos; para saber que numero se selecciono. Cuando ocurra el evento.
+                e.target, // Propiedad 1; quien dispara el evento.
+                document.querySelectorAll('.C-n'), // Propiedad 2; la NodeList de los numeros.
+                cantidadStar //Propiedad 3; funcion que calcula la cantidad de estrellas.
+            );
     });
 
     // Componente final

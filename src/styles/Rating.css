@@ -39,9 +39,9 @@
     align-items: center;
     inline-size: 3.375rem;
     block-size: 3.375rem;
-    background-color: var(--Dark-Blue-modal);
     border-radius: 50%;
     font-weight: var(--weight-Bold);
+    background-color: var(--Dark-Blue-modal);
 }
 .C-n span {
     pointer-events: none;
@@ -51,7 +51,7 @@
     color: var(--Very-Dark-Blue);
     cursor: pointer;
 }
-.is-Active {
+.C-n.is-Active {
     background-color: var(--White);
     color: var(--Very-Dark-Blue);
 }
