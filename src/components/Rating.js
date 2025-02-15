@@ -29,7 +29,6 @@ export const Rating = () => {
         const $divN = document.createElement('div'),
             $span = document.createElement('span');
         
-        $divN.setAttribute('id', `N-${i}`);
         $divN.classList.add('C-n');
 
         $span.textContent = `${i}`;

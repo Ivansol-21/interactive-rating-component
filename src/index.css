@@ -45,4 +45,5 @@ body {
     justify-content: center;
     align-items: center;
     background-color: var(--Very-Dark-Blue);
+    padding: 0 1.25rem;
 }

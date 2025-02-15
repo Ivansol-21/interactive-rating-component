@@ -56,3 +56,11 @@
     background-color: var(--White);
     color: var(--Very-Dark-Blue);
 }
+
+/* Responsividad */
+@media screen and (max-width: 320px) {
+    .C-n {
+        inline-size: 3rem;
+        block-size: 3rem;
+    }
+}
