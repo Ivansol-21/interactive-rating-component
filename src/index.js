@@ -1,6 +1,6 @@
 import { Rating } from './components/Rating.js';
 
-document.addEventListener('DOMContentLoaded', (e) => {
+document.addEventListener('DOMContentLoaded', () => {
     // LLamando el elemento principal del DOM
     const $app = document.getElementById('root');
     // Creando el fragmento para los componentes

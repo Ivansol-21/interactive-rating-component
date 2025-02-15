@@ -1,5 +1,6 @@
-export default function BotonSubmit () {
+import { ThankYou } from './ThankYou.js';
 
+export default function BotonSubmit(getNroSelect) {
     // Creando elementos del DOM
     const $button = document.createElement('button');
 
@@ -9,15 +10,12 @@ export default function BotonSubmit () {
     $button.textContent = 'SUBMIT';
 
     // Manejador de eventos 'CLICK'
-    document.addEventListener('click', e => {
-        const target = e.target;
-        
-        /* console.log(target) */
-        if(target.id === 'B-submit'){ 
-            console.log('Exito')
-        }
+    $button.addEventListener('click', () => {
+        const $nodoPadre = document.getElementById('root');
+        $nodoPadre.innerHTML = ''; // Limpiar contenido previo; el componente Rating
+        $nodoPadre.appendChild(ThankYou(getNroSelect())); // Agrega el componete ThankYou, el cual llama la funcion que recibe como propiedad el boton, y lo que retorna (numero) lo pasa como propiedad al componente ThankYou
     });
 
     return $button;
-};
+}
 

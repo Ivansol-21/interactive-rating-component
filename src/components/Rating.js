@@ -10,6 +10,8 @@ export const Rating = () => {
         $p = document.createElement('p'),
         $calificacion = document.createElement('div'),
         $divText = document.createElement('div');
+    // Variable para guardar el numero seleccionado
+    let nroSelect = 0;
 
     // Agrendo ruta y atributos a el icono star
     $star.setAttribute('src', './src/images/icon-star.svg');
@@ -47,24 +49,28 @@ export const Rating = () => {
     $cardRating.appendChild($starContent);
     $cardRating.appendChild($divText);
     $cardRating.appendChild($calificacion);
-    $cardRating.appendChild(BotonSubmit());
+
+    // Se agrega el componente, el cual recibe una funcion como parametro; actualiza el numero seleccionado cuando se da click en el boton
+    $cardRating.appendChild(BotonSubmit(() => nroSelect)); // Se agrega la constante que tiene el componentente
 
     // Función para la cantidad de estrellas que se agregaran (Opcional)
     const cantidadStar = (cantidad) => {
+        nroSelect = cantidad; // En esta variable se guarda el numero seleccionado (cantidad)
+
         $starContent.innerHTML = ''; // Limpiar contenido previo
         for (let i = 0; i < cantidad; i++) {
-            const newStar = document.createElement('img');
+            const $newStar = document.createElement('img');
 
-            newStar.setAttribute('src', './src/images/icon-star.svg');
-            newStar.setAttribute('alt', 'icon-star');
-            newStar.classList.add('icon-star');
+            $newStar.setAttribute('src', './src/images/icon-star.svg');
+            $newStar.setAttribute('alt', 'icon-star');
+            $newStar.classList.add('icon-star');
 
-            $starContent.appendChild(newStar);
+            $starContent.appendChild($newStar);
         }
     };
 
     // Manejador de eventos 'CLICK'
-    document.addEventListener('click', e => {
+    $calificacion.addEventListener('click', e => {
             numSeleccionado( // Esta es la funcion que importamos; para saber que numero se selecciono. Cuando ocurra el evento.
                 e.target, // Propiedad 1; quien dispara el evento.
                 document.querySelectorAll('.C-n'), // Propiedad 2; la NodeList de los numeros.
