@@ -1,0 +1,30 @@
+.thank-you-card {
+    max-inline-size: 25.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.375rem;
+    padding: 2.125rem;
+    background-image: linear-gradient(rgba(37, 45, 55, 0.65), var(--Dark-Blue), rgba(37, 45, 55, 0.3));;
+    border-radius: 1.5rem;
+    color: var(--White);
+}
+.thank-you__img {
+    margin: 0 0 1.5rem 0;
+}
+.thank-you__message-orange {
+    color: var(--Orange);
+    padding: 0.625rem 1.25rem 0.4rem;
+    border-radius: 1.5rem;
+    background-color: var(--Dark-Blue-modal);
+}
+.thank-you__title {
+    font-size: 1.75rem;
+    font-weight: var(--weight-Bold);
+    margin: 0 0 0.875rem 0;
+}
+.thank-you__message {
+    color: var(--Light-Grey);
+    line-height: 160%;
+}

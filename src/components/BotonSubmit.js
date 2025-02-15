@@ -8,7 +8,7 @@ export default function BotonSubmit(getNroSelect) {
     $button.id = 'B-submit';
     $button.classList.add('btm-Sut');
     $button.textContent = 'SUBMIT';
-
+    
     // Manejador de eventos 'CLICK'
     $button.addEventListener('click', () => {
         const $nodoPadre = document.getElementById('root');

@@ -4,6 +4,7 @@
 /* Estilos individuales de los componentes */
 @import url('./styles/Rating.css');
 @import url('./styles/BotonSubmit.css');
+@import url('./styles/ThankYou.css');
 
 :root {
     /* Color primary */
