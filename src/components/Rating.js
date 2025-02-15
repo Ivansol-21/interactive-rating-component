@@ -29,6 +29,7 @@ export const Rating = () => {
         const $divN = document.createElement('div'),
             $span = document.createElement('span');
         
+        $divN.setAttribute('id', `N-${i}`);
         $divN.classList.add('C-n');
 
         $span.textContent = `${i}`;
@@ -75,6 +76,7 @@ export const Rating = () => {
                 document.querySelectorAll('.C-n'), // Propiedad 2; la NodeList de los numeros.
                 cantidadStar //Propiedad 3; funcion que calcula la cantidad de estrellas.
             );
+            console.log(nroSelect)
     });
 
     // Componente final
