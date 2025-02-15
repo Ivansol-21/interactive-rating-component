@@ -8,9 +8,10 @@ export const ThankYou = (nroSelect) => {
         $h1 = document.createElement('h1'),
         $p = document.createElement('p');
 
-    // Agregando contenido
+    // Agregando ruta y atributos a la imegen
     $img.setAttribute('src', './src/images/illustration-thank-you.svg');
     $img.setAttribute('alt', 'illustration-thank-you');
+    // Agregando contenido y anidando elementos
     $figcaption.textContent = `You selected ${nroSelect} out of 5`; // "nroSelect" es el numero que recibe como propiedad
     $figure.appendChild($img);
     $figure.appendChild($figcaption);
