@@ -51,7 +51,7 @@ export const Rating = () => {
     $cardRating.appendChild($calificacion);
 
     // Se agrega el componente, el cual recibe una funcion como parametro; actualiza el numero seleccionado cuando se da click en el boton
-    $cardRating.appendChild(BotonSubmit(() => nroSelect)); // Se agrega la constante que tiene el componentente
+    $cardRating.appendChild(BotonSubmit(() => nroSelect)); // Se agrega el componentente
 
     // Función para la cantidad de estrellas que se agregaran (Opcional)
     const cantidadStar = (cantidad) => {
